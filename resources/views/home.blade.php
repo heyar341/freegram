@@ -13,7 +13,6 @@
                 <div class="pr-5"><strong>153</strong>posts</div>
                 <div class="pr-5"><strong>24</strong>follower</div>
                 <div class="pr-5"><strong>123</strong>following</div>
-                <div>アイウエオ</div>
             </div>
         </div>
     </div>
