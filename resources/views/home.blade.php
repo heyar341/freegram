@@ -23,7 +23,7 @@
 
     <div class="row pt-5">
         <div class="col-4">
-            <img class="w-100" src="https://scontent-nrt1-1.cdninstagram.com/v/t51.2885-15/e35/c0.111.928.928a/s150x150/85099648_2535244706754098_6509943847503270911_n.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=RB_1bc2S1fUAX-iSPM8&oh=db65964a137393b4ed7679d9ce50c9b5&oe=5E8CE64D">
+            <img class="w-100" src="https://scontent-nrt1-1.cdninstagram.com/v/t51.2885-15/e35/c0.111.928.928a/s150x150/85099648_2535244706754098_6509943847503270911_n.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=RB_1bc2S1fUAX-iSPM8&oh=db65964a137393b4ed7679d9ce50c9b5&oe=5E8CE64D">
         </div>
         <div class="col-4">
             <img class="w-100" src="https://scontent-nrt1-1.cdninstagram.com/v/t51.2885-15/e35/c0.111.928.928a/s150x150/85099648_2535244706754098_6509943847503270911_n.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=RB_1bc2S1fUAX-iSPM8&oh=db65964a137393b4ed7679d9ce50c9b5&oe=5E8CE64D">
