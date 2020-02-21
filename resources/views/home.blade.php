@@ -14,6 +14,10 @@
                 <div class="pr-5"><strong>24</strong>follower</div>
                 <div class="pr-5"><strong></strong>following</div>
             </div>
+
+            <div class="pt-4 font-weight-bold">freecodeGram.org</div>
+            <div>We're global community of millions of people</div>
+            <div><a href="www.freecodecamp.org">www.freecodecamp.org</a></div>
         </div>
     </div>
 </div>
