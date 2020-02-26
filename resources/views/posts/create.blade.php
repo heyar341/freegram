@@ -3,6 +3,8 @@
 @section('content')
     <div class="content">
         <form action="/p" enctype="multipart/form-data" method="post">
+{{--            enctypeはファイル送信するときに書く必要あり--}}
+            @csrf
             <div class="row">
                 <div class="col-8 offset-2">
                     <h1>Add New Post</h1>
@@ -16,8 +18,8 @@
 
                         @error('caption')
                         <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                            <strong>{{ $message }}</strong>
+                        </span>
                         @enderror
                     </div>
 
@@ -26,9 +28,9 @@
                         <input type="file", class="form-control-file" id="image" name="image">
 
                         @error('image')
-                        <span class="invalid-feedback" role="alert">
+{{--                        <span class="invalid-feedback" role="alert">--}}
                                         <strong>{{ $message }}</strong>
-                                    </span>
+{{--                                    </span>--}}
                         @enderror
                     </div>
 
