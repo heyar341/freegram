@@ -19,6 +19,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('profile/{user_id}', 'ProfilesController@index')->name('profile.show');
-Route::get('/p/{post}', 'PostsController@show');
+Route::get('profile/{user_id}/edit', 'ProfilesController@edit')->name('profile.edit');
+Route::patch('profile/{user}', 'ProfilesController@update')->name('profile.update');
+
 Route::get('/p/create', 'PostsController@create');
+Route::get('/p/{post}', 'PostsController@show');
+//                ↑{post}にはどんな値でも入るから、createより上に書いてしまうと、create機能が使えなくなる
 Route::post('/p', 'PostsController@store');
