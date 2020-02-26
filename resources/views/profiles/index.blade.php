@@ -22,10 +22,15 @@
                     <div class="pr-5"><strong>24</strong>follower</div>
                     <div class="pr-5"><strong>123</strong>following</div>
                 </div>
-
+                @if($user->profile->title != 'NotCreated')
                 <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+                @endif
+                @if($user->profile->description != 'NotCreated')
                 <div>{{ $user->profile->description }}</div>
+                @endif
+                @if($user->profile->url != 'NotCreated')
                 <div><a href="www.freecodecamp.org">{{ $user->profile->url }}</a></div>
+                @endif
             </div>
         </div>
 
