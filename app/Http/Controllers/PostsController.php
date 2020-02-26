@@ -8,7 +8,7 @@ use Illuminate\Validation\Validator;
 
 class PostsController extends Controller
 {
-
+//middlewareでログイン中のみ投稿できるようにする
     public function __construct()
     {
         $this->middleware('auth');
@@ -25,11 +25,16 @@ class PostsController extends Controller
             'image' => ['required','image'],
             ]
         );
+
+        $imagePath = request('image')->store('uploads','public');
 //        auth()でログイン中のユーザーメソッドを使う
-        auth()->user()->posts()->create($data);
+        auth()->user()->posts()->create([
+            'caption' => $data['caption'],
+            'image' => $imagePath,
+        ]);
 
 //        Post::create($data);
 
-        dd(request()->all());
+        return redirect('profile/' . auth()->user()->id);
     }
 }
