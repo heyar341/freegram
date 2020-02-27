@@ -45,7 +45,7 @@ class User extends Authenticatable
             'title' => 'NotCreated',
             'description' => 'NotCreated',
             'url' => 'NotCreated',
-            'image' => 'NotCreated',
+            'image' =>'profile/Lt7G1TYSI5iu87OpUrY5uc94P4MRVMS4RJ7q9n7t.png',
 
            ]);
         });
