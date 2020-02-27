@@ -19,6 +19,7 @@ class CreateProfilesTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('url');
+            $table->string('image');
             $table->timestamps();
         });
     }
