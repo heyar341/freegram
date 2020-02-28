@@ -11,8 +11,9 @@
                     <div class="d-flex align-items-center pb-3">
                         <h4>{{ $user->username }}</h4>
 
-                            <follow-button user-id = "{{$user->id}}" follows="{{ $follows }}"></follow-button>
-
+                        @if(auth()->user()->id != $user->id )
+                        <follow-button user-id = "{{$user->id}}" follows="{{ $follows }}"></follow-button>
+                        @endif
                     </div>
                     @can('update',$user->profile)
                         <a href="/p/create">Add a Post</a>
