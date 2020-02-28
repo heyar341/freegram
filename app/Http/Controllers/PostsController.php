@@ -16,11 +16,20 @@ class PostsController extends Controller
     }
 
     public function index(){
-        $users = auth()->user()->following()->pluck('profiles.user_id');
 
-        $posts = Post::where('user_id', $users)->with('user')->latest()->paginate(3);
+//followしていないとデータベースアクセスでエラーが出るので、followしていない場合、自分のprofileページに飛ぶ
+        if(auth()->user()->following()->exists()){
+            $users = auth()->user()->following()->pluck('profiles.user_id');
 
-        return view('posts.index', compact('posts'));
+            $posts = Post::where('user_id', $users)->with('user')->latest()->paginate(3);
+
+            return view('posts.index', compact('posts'));
+
+        }
+        else {
+            return redirect('profile/' .auth()->user()->id);
+
+        }
     }
 
 
