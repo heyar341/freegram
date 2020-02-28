@@ -11,15 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Auth::routes();
 
 Route::post('follow/{user}','FollowsController@store');
 
+Route::get('/', 'PostsController@index');
 
 Route::get('profile/{user_id}', 'ProfilesController@index')->name('profile.show');
 Route::get('profile/{user_id}/edit', 'ProfilesController@edit')->name('profile.edit');
