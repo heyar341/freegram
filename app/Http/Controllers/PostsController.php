@@ -15,6 +15,15 @@ class PostsController extends Controller
         $this->middleware('auth');
     }
 
+    public function index(){
+        $users = auth()->user()->following()->pluck('profiles.user_id');
+
+        $posts = Post::where('user_id', $users)->with('user')->latest()->paginate(3);
+
+        return view('posts.index', compact('posts'));
+    }
+
+
     public function create(){
         return view('posts.create');
     }
