@@ -2,9 +2,11 @@
 
 namespace App;
 
+use App\Mail\NewUserWelcomeMail;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Mail;
 
 class User extends Authenticatable
 {
@@ -46,8 +48,9 @@ class User extends Authenticatable
             'description' => 'NotCreated',
             'url' => 'NotCreated',
             'image' =>'profile/Lt7G1TYSI5iu87OpUrY5uc94P4MRVMS4RJ7q9n7t.png',
-
            ]);
+
+        Mail::to($user->email)->send(new NewUserWelcomeMail());
         });
     }
     public function profile()
