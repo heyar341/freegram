@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="row" style="background-color:#e3f2fd;">
             <div class="col-3 p-5">
                 <img src="/storage/{{ $user->profile->image }}" class="rounded-circle w-100">
             </div>
@@ -16,16 +16,16 @@
                         @endif
                     </div>
                     @can('update',$user->profile)
-                        <a href="/p/create">Add a Post</a>
+                        <a href="/p/create" class=" bg-white">Add a Post</a>
                     @endcan
                 </div>
                 @can('update',$user->profile)
-                <a href="/profile/{{ $user->id }}/edit">Edit Profile</a>
+                <a href="/profile/{{ $user->id }}/edit" class=" bg-white">Edit Profile</a>
                 @endcan
-                <div class="d-flex">
-                    <div class="pr-5"><strong>{{ $postCount }}</strong>posts</div>
-                    <div class="pr-5"><strong>{{ $followersCount }}</strong>follower</div>
-                    <div class="pr-5"><strong>{{$followingCount}}</strong>following</div>
+                <div class="d-flex pt-5">
+                    <div class="pr-5"><h4><strong>{{ $postCount }}</strong>posts</h4></div>
+                    <div class="pr-5"><h4><strong>{{ $followersCount }}</strong>follower</h4></div>
+                    <div class="pr-5"><h4><strong>{{$followingCount}}</strong>following</h4></div>
                 </div>
                 @if($user->profile->title != 'NotCreated')
                 <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>

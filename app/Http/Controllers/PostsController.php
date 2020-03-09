@@ -21,9 +21,9 @@ class PostsController extends Controller
         if(auth()->user()->following()->exists()){
             $users = auth()->user()->following()->pluck('profiles.user_id');
 
-            $posts = Post::where('user_id', $users)->with('user')->latest()->paginate(3);
+            $posts = Post::where('user_id', $users)->with('user')->latest()->paginate(6);
 
-            return view('posts.index', compact('posts'));
+            return view('posts.index2', compact('posts'));
 
         }
         else {
